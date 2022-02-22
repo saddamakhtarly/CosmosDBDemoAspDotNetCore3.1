@@ -12,9 +12,9 @@ namespace CosmosDBDemo.Controllers
     {
         public async Task<IActionResult> Index()
         {
-            var url = "https://saddamcosmosdbaccountname.documents.azure.com:443/";
+            var url = "Enter Your URL";
             var db = "Ecommerce";
-            var key = "X8GpjdfGUrw7YNuBM86Pvl1G7N6YUIiyh78JOFGLquU6a80XH7li7WxaLrQ1Rbmhsl30KjW4clsLI6idsu6I6w==";
+            var key = "Enter Your Key";
             CosmosClient client = new CosmosClient(url, key);
             Database database = await client.CreateDatabaseIfNotExistsAsync(db);
             Container containers = await database.CreateContainerIfNotExistsAsync("Product", "/ProductId");
@@ -40,9 +40,9 @@ namespace CosmosDBDemo.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(Products products)
         {
-            var url = "https://saddamcosmosdbaccountname.documents.azure.com:443/";
+            var url = "Enter Your URL";
             var db = "Ecommerce";
-            var key = "X8GpjdfGUrw7YNuBM86Pvl1G7N6YUIiyh78JOFGLquU6a80XH7li7WxaLrQ1Rbmhsl30KjW4clsLI6idsu6I6w==";
+            var key = "Enter Your Key";
             CosmosClient client = new CosmosClient(url, key);
             Database database = await client.CreateDatabaseIfNotExistsAsync(db);
             Container containers = await database.CreateContainerIfNotExistsAsync("Product", "/ProductId");
